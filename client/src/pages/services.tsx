@@ -136,7 +136,7 @@ export default function Services() {
                 </div>
                 
                 <div className="text-center mb-4">
-                  <div className="text-2xl font-bold text-gray-900">From £20,000</div>
+                  <div className="text-2xl font-bold text-gray-900">From £10,000</div>
                   <div className="text-sm text-gray-600">12-month arrangement</div>
                 </div>
                 
