@@ -119,6 +119,7 @@
   --brand-gray: hsl(215 16% 47%);
   --brand-dark: hsl(220 26% 14%);
   --brand-green: hsl(142 71% 45%);
+  --brand-orange: hsl(25 95% 53%);
   
   --font-sans: 'Inter', sans-serif;
 }
@@ -171,6 +172,14 @@
 
 .border-brand-blue {
   border-color: var(--brand-blue);
+}
+
+.bg-brand-green {
+  background-color: var(--brand-green);
+}
+
+.bg-brand-orange {
+  background-color: var(--brand-orange);
 }
 
 .brand-primary {

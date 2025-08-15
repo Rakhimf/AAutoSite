@@ -47,7 +47,8 @@ export default function Blog() {
       tags: ["ROI", "RPA", "Business Case", "Metrics", "Calculator"],
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
       views: 1923,
-      featured: true
+      featured: true,
+      hasCalculator: true
     },
     {
       id: "uipath-attended-vs-unattended-robots",
@@ -267,11 +268,20 @@ export default function Blog() {
                         {new Date(post.publishDate).toLocaleDateString()}
                       </div>
                     </div>
-                    <Link href={`/blog/${post.id}`}>
-                      <Button variant="ghost" className="text-brand-blue hover:text-blue-700 hover:bg-blue-50 w-full">
-                        Read More <ArrowRight className="w-4 h-4 ml-2" />
-                      </Button>
-                    </Link>
+                    <div className="flex gap-2">
+                      <Link href={`/blog/${post.id}`} className="flex-1">
+                        <Button variant="ghost" className="text-brand-blue hover:text-blue-700 hover:bg-blue-50 w-full">
+                          Read More <ArrowRight className="w-4 h-4 ml-2" />
+                        </Button>
+                      </Link>
+                      {(post as any).hasCalculator && (
+                        <Link href="/roi-calculator">
+                          <Button className="bg-brand-green hover:bg-green-600 text-white">
+                            Try Calculator
+                          </Button>
+                        </Link>
+                      )}
+                    </div>
                   </CardContent>
                 </Card>
               );

@@ -13,6 +13,7 @@ import About from "@/pages/about";
 import Contact from "@/pages/contact";
 import Blog from "@/pages/blog";
 import BlogPost from "@/pages/blog-post";
+import ROICalculator from "@/pages/roi-calculator";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -26,6 +27,7 @@ function Router() {
       <Route path="/contact" component={Contact} />
       <Route path="/blog" component={Blog} />
       <Route path="/blog/:slug" component={BlogPost} />
+      <Route path="/roi-calculator" component={ROICalculator} />
       <Route component={NotFound} />
     </Switch>
   );

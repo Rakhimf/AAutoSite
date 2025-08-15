@@ -16,6 +16,7 @@ export default function Navigation() {
     { href: "/industries", label: "Industries" },
     { href: "/about", label: "About" },
     { href: "/blog", label: "Blog" },
+    { href: "/roi-calculator", label: "ROI Calculator" },
     { href: "/contact", label: "Contact" },
   ];
 
