@@ -28,14 +28,11 @@ export default function Home() {
 
       {/* Key Benefits Section */}
       <section className="py-16 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
-        {/* Background decoration */}
-        <div className="absolute top-0 left-0 w-72 h-72 bg-brand-blue opacity-5 rounded-full -translate-x-36 -translate-y-36"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-brand-green opacity-5 rounded-full translate-x-48 translate-y-48"></div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 animate-fadeInUp">
             <div className="inline-flex items-center bg-gradient-to-r from-brand-blue to-blue-600 text-white px-6 py-2 rounded-full text-sm font-medium mb-4">
-              ⭐ Award-Winning RPA Solutions
+              Award-Winning RPA Solutions
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Why Choose Desk Automate?
@@ -71,7 +68,7 @@ export default function Home() {
                   Expert Team
                 </h3>
                 <p className="text-gray-600">
-                  Certified UiPath consultants with <span className="font-semibold text-brand-green">10+ years</span> of industry experience.
+                  Certified UiPath consultants with <span className="font-semibold text-brand-green">extensive</span> industry experience.
                 </p>
                 <div className="mt-4 text-2xl font-bold text-brand-green">500+</div>
               </CardContent>
@@ -204,7 +201,7 @@ export default function Home() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-fadeInUp">
             <div className="inline-flex items-center bg-gradient-to-r from-brand-green to-green-600 text-white px-6 py-2 rounded-full text-sm font-medium mb-4">
-              🔧 Comprehensive RPA Services
+              Comprehensive RPA Services
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Our RPA Implementation Services
@@ -249,7 +246,7 @@ export default function Home() {
               <CardContent className="p-8 relative">
                 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                   <span className="bg-gradient-to-r from-brand-green to-green-600 text-white px-4 py-1 rounded-full text-xs font-semibold shadow-lg">
-                    ⭐ Most Popular
+                    Most Popular
                   </span>
                 </div>
                 <div className="absolute top-4 right-4 text-brand-green opacity-20">
@@ -451,7 +448,7 @@ export default function Home() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-fadeInUp">
             <div className="inline-flex items-center bg-white bg-opacity-10 backdrop-blur-sm text-white px-6 py-2 rounded-full text-sm font-medium mb-4">
-              📊 Proven Results
+              Proven Results
             </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Numbers That Matter
@@ -466,8 +463,8 @@ export default function Home() {
               <div className="w-20 h-20 bg-gradient-to-br from-brand-blue to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 animate-float">
                 <TrendingUp className="text-white" size={32} />
               </div>
-              <div className="text-4xl font-bold text-white mb-2">10+</div>
-              <div className="text-gray-300">Years Experience</div>
+              <div className="text-4xl font-bold text-white mb-2">500+</div>
+              <div className="text-gray-300">Projects Completed</div>
             </div>
 
             <div className="text-center animate-fadeInUp">
@@ -521,14 +518,11 @@ export default function Home() {
 
       {/* Contact CTA */}
       <section className="py-16 bg-gradient-to-br from-blue-50 to-white relative overflow-hidden">
-        {/* Background decoration */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-brand-blue opacity-5 rounded-full translate-x-48 -translate-y-48"></div>
-        <div className="absolute bottom-0 left-0 w-72 h-72 bg-brand-green opacity-5 rounded-full -translate-x-36 translate-y-36"></div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 animate-fadeInUp">
             <div className="inline-flex items-center bg-gradient-to-r from-brand-blue to-blue-600 text-white px-6 py-2 rounded-full text-sm font-medium mb-4">
-              🚀 Ready to Transform?
+              Ready to Transform?
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Get Started with Automation

@@ -460,7 +460,7 @@ export default function RPAInfo() {
           <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
             <div className="flex items-center">
               <div className="flex items-center justify-center w-12 h-12 bg-white/10 rounded-lg mr-4">
-                <span className="text-2xl">📞</span>
+                <Phone className="text-white" size={24} />
               </div>
               <div>
                 <p className="font-semibold">Call Us</p>
@@ -469,7 +469,7 @@ export default function RPAInfo() {
             </div>
             <div className="flex items-center">
               <div className="flex items-center justify-center w-12 h-12 bg-white/10 rounded-lg mr-4">
-                <span className="text-2xl">✉️</span>
+                <Mail className="text-white" size={24} />
               </div>
               <div>
                 <p className="font-semibold">Email Us</p>

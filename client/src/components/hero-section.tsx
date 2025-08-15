@@ -14,7 +14,6 @@ export default function HeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="animate-slideInLeft">
             <div className="inline-flex items-center bg-brand-blue bg-opacity-10 text-brand-blue px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <span className="animate-pulse-gentle mr-2">🚀</span>
               UK's Leading RPA Specialists
             </div>
             

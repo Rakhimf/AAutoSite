@@ -16,7 +16,7 @@ import {
 
 export default function About() {
   const stats = [
-    { value: "10+", label: "Years Experience", color: "brand-blue" },
+    { value: "500+", label: "Projects Completed", color: "brand-blue" },
     { value: "500+", label: "Implementations", color: "brand-green" },
     { value: "200+", label: "Happy Clients", color: "brand-orange" },
     { value: "95%", label: "Success Rate", color: "purple-500" }
@@ -99,7 +99,7 @@ export default function About() {
                 serves clients from SMEs to FTSE companies across diverse industries.
               </p>
               <p className="text-lg text-gray-600 mb-8">
-                With over a decade of experience in business process optimization and 
+                With extensive experience in business process optimization and 
                 automation, we have helped hundreds of organizations achieve remarkable 
                 efficiency gains, cost reductions, and operational excellence through 
                 strategic RPA implementations.
@@ -157,8 +157,8 @@ export default function About() {
                   <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Our Impact</h3>
                   <div className="grid grid-cols-3 gap-6 text-center">
                     <div>
-                      <div className="text-3xl font-bold text-brand-blue">10+</div>
-                      <div className="text-sm text-gray-600">Years Experience</div>
+                      <div className="text-3xl font-bold text-brand-blue">500+</div>
+                      <div className="text-sm text-gray-600">Projects Completed</div>
                     </div>
                     <div>
                       <div className="text-3xl font-bold text-brand-green">200+</div>
