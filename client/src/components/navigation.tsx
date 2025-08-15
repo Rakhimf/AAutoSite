@@ -19,13 +19,13 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="bg-black/80 backdrop-blur-md shadow-2xl sticky top-0 z-50 border-b border-brand-cyan/20">
+    <nav className="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <Link href="/">
-              <span className="text-2xl font-bold font-cyber text-brand-cyan cursor-pointer cyber-text-glow">
-                DESK AUTOMATE
+              <span className="text-2xl font-bold text-brand-blue cursor-pointer">
+                Desk Automate
               </span>
             </Link>
           </div>
@@ -36,10 +36,10 @@ export default function Navigation() {
               {navItems.map((item) => (
                 <Link key={item.href} href={item.href}>
                   <span
-                    className={`px-3 py-2 rounded-md text-sm font-medium font-cyber uppercase tracking-wider transition-all cursor-pointer ${
+                    className={`px-3 py-2 rounded-md text-sm font-medium transition-all cursor-pointer ${
                       isActive(item.href)
-                        ? "text-brand-cyan cyber-text-glow"
-                        : "text-gray-300 hover:text-brand-cyan hover:cyber-text-glow"
+                        ? "text-brand-blue bg-brand-light-blue"
+                        : "text-gray-700 hover:text-brand-blue hover:bg-gray-50"
                     }`}
                   >
                     {item.label}
@@ -52,8 +52,8 @@ export default function Navigation() {
           {/* Get Started Button */}
           <div className="hidden md:block">
             <Link href="/contact">
-              <Button className="neon-button font-cyber text-sm px-6 py-2">
-                INITIALIZE
+              <Button className="bg-brand-blue hover:bg-brand-primary text-white px-6 py-2 rounded-lg font-semibold">
+                Get Started
               </Button>
             </Link>
           </div>
@@ -62,7 +62,7 @@ export default function Navigation() {
           <div className="md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-gray-300 hover:text-brand-cyan focus:outline-none focus:text-brand-cyan transition-colors"
+              className="text-gray-700 hover:text-brand-blue focus:outline-none focus:text-brand-blue transition-colors"
             >
               {isMobileMenuOpen ? (
                 <X className="h-6 w-6" />
@@ -76,14 +76,14 @@ export default function Navigation() {
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black/90 border-t border-brand-cyan/20 backdrop-blur-md">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
               {navItems.map((item) => (
                 <Link key={item.href} href={item.href}>
                   <span
-                    className={`block px-3 py-2 rounded-md text-base font-medium font-cyber uppercase tracking-wider cursor-pointer transition-all ${
+                    className={`block px-3 py-2 rounded-md text-base font-medium cursor-pointer transition-all ${
                       isActive(item.href)
-                        ? "text-brand-cyan bg-brand-cyan/10 cyber-text-glow"
-                        : "text-gray-300 hover:text-brand-cyan hover:bg-brand-cyan/5"
+                        ? "text-brand-blue bg-brand-light-blue"
+                        : "text-gray-700 hover:text-brand-blue hover:bg-gray-50"
                     }`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
@@ -94,10 +94,10 @@ export default function Navigation() {
               <div className="pt-2">
                 <Link href="/contact">
                   <Button 
-                    className="w-full neon-button font-cyber"
+                    className="w-full bg-brand-blue hover:bg-brand-primary text-white rounded-lg font-semibold"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    INITIALIZE
+                    Get Started
                   </Button>
                 </Link>
               </div>
