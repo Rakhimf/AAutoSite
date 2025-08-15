@@ -18,6 +18,7 @@ import {
   Phone,
   Mail,
   MapPin,
+  Rocket,
 } from "lucide-react";
 
 export default function Home() {
@@ -26,10 +27,17 @@ export default function Home() {
       <HeroSection />
 
       {/* Key Benefits Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+      <section className="py-16 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+        {/* Background decoration */}
+        <div className="absolute top-0 left-0 w-72 h-72 bg-brand-blue opacity-5 rounded-full -translate-x-36 -translate-y-36"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-brand-green opacity-5 rounded-full translate-x-48 translate-y-48"></div>
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 animate-fadeInUp">
+            <div className="inline-flex items-center bg-gradient-to-r from-brand-blue to-blue-600 text-white px-6 py-2 rounded-full text-sm font-medium mb-4">
+              ⭐ Award-Winning RPA Solutions
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Why Choose Desk Automate?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -39,61 +47,63 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="text-center p-6 hover:shadow-lg transition-shadow">
+            <Card className="text-center p-6 hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 bg-gradient-to-br from-white to-blue-50 border-0 animate-fadeInUp">
               <CardContent className="p-0">
-                <div className="w-16 h-16 bg-brand-blue bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <TrendingUp className="text-2xl text-brand-blue" size={32} />
+                <div className="w-16 h-16 bg-gradient-to-br from-brand-blue to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg animate-pulse-gentle">
+                  <TrendingUp className="text-white" size={32} />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   Proven ROI
                 </h3>
                 <p className="text-gray-600">
-                  Average 3x return on investment within 12 months of
-                  implementation.
+                  Average <span className="font-semibold text-brand-blue">3x return</span> on investment within 12 months of implementation.
                 </p>
+                <div className="mt-4 text-2xl font-bold text-brand-blue">300%</div>
               </CardContent>
             </Card>
 
-            <Card className="text-center p-6 hover:shadow-lg transition-shadow">
+            <Card className="text-center p-6 hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 bg-gradient-to-br from-white to-green-50 border-0 animate-fadeInUp">
               <CardContent className="p-0">
-                <div className="w-16 h-16 bg-brand-green bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="text-2xl text-brand-green" size={32} />
+                <div className="w-16 h-16 bg-gradient-to-br from-brand-green to-green-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg animate-pulse-gentle">
+                  <Users className="text-white" size={32} />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   Expert Team
                 </h3>
                 <p className="text-gray-600">
-                  Certified UiPath consultants with extensive industry experience.
+                  Certified UiPath consultants with <span className="font-semibold text-brand-green">10+ years</span> of industry experience.
                 </p>
+                <div className="mt-4 text-2xl font-bold text-brand-green">500+</div>
               </CardContent>
             </Card>
 
-            <Card className="text-center p-6 hover:shadow-lg transition-shadow">
+            <Card className="text-center p-6 hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 bg-gradient-to-br from-white to-orange-50 border-0 animate-fadeInUp">
               <CardContent className="p-0">
-                <div className="w-16 h-16 bg-brand-orange bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Clock className="text-2xl text-brand-orange" size={32} />
+                <div className="w-16 h-16 bg-gradient-to-br from-brand-orange to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg animate-pulse-gentle">
+                  <Clock className="text-white" size={32} />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   24/7 Operation
                 </h3>
                 <p className="text-gray-600">
-                  Unattended automation running around the clock for maximum
-                  efficiency.
+                  Unattended automation running <span className="font-semibold text-brand-orange">168 hours/week</span> for maximum efficiency.
                 </p>
+                <div className="mt-4 text-2xl font-bold text-brand-orange">24/7</div>
               </CardContent>
             </Card>
 
-            <Card className="text-center p-6 hover:shadow-lg transition-shadow">
+            <Card className="text-center p-6 hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 bg-gradient-to-br from-white to-purple-50 border-0 animate-fadeInUp">
               <CardContent className="p-0">
-                <div className="w-16 h-16 bg-purple-500 bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Shield className="text-2xl text-purple-500" size={32} />
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg animate-pulse-gentle">
+                  <Shield className="text-white" size={32} />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   Enterprise Security
                 </h3>
                 <p className="text-gray-600">
-                  Bank-level security with comprehensive audit trails and compliance.
+                  Bank-level security with <span className="font-semibold text-purple-500">99.9% uptime</span> and comprehensive audit trails.
                 </p>
+                <div className="mt-4 text-2xl font-bold text-purple-500">99.9%</div>
               </CardContent>
             </Card>
           </div>
@@ -178,10 +188,25 @@ export default function Home() {
       </section>
 
       {/* Services Overview */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+      <section className="py-16 bg-white relative">
+        {/* Background SVG pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <svg className="absolute inset-0 h-full w-full" fill="none" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="large-grid" width="80" height="80" patternUnits="userSpaceOnUse">
+                <path d="M 80 0 L 0 0 0 80" fill="none" stroke="#3B82F6" strokeWidth="1"/>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#large-grid)"/>
+          </svg>
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16 animate-fadeInUp">
+            <div className="inline-flex items-center bg-gradient-to-r from-brand-green to-green-600 text-white px-6 py-2 rounded-full text-sm font-medium mb-4">
+              🔧 Comprehensive RPA Services
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Our RPA Implementation Services
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -191,10 +216,15 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardContent className="p-8">
-                <div className="w-12 h-12 bg-brand-blue bg-opacity-10 rounded-lg flex items-center justify-center mb-6">
-                  <TrendingUp className="text-brand-blue text-xl" />
+            <Card className="hover:shadow-2xl transition-all duration-500 transform hover:scale-105 bg-gradient-to-br from-white to-blue-50 border-0 animate-slideInLeft">
+              <CardContent className="p-8 relative">
+                <div className="absolute top-4 right-4 text-brand-blue opacity-20">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                  </svg>
+                </div>
+                <div className="w-16 h-16 bg-gradient-to-br from-brand-blue to-blue-600 rounded-xl flex items-center justify-center mb-6 shadow-lg animate-float">
+                  <TrendingUp className="text-white" size={24} />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">
                   Discovery & Assessment
@@ -203,23 +233,32 @@ export default function Home() {
                   Comprehensive process analysis to identify automation opportunities
                   and build your business case.
                 </p>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-sm font-semibold text-brand-blue">Timeline</span>
+                  <span className="text-sm text-gray-600">2-4 weeks</span>
+                </div>
                 <Link href="/services">
-                  <Button variant="ghost" className="text-brand-blue hover:text-blue-700">
+                  <Button variant="ghost" className="text-brand-blue hover:text-blue-700 hover:bg-blue-50 w-full">
                     Learn More →
                   </Button>
                 </Link>
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow border-brand-green border-2">
-              <CardContent className="p-8">
+            <Card className="hover:shadow-2xl transition-all duration-500 transform hover:scale-105 bg-gradient-to-br from-white to-green-50 border-2 border-brand-green border-opacity-20 animate-fadeInUp">
+              <CardContent className="p-8 relative">
                 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-brand-green text-white px-3 py-1 rounded-full text-xs font-semibold">
-                    Most Popular
+                  <span className="bg-gradient-to-r from-brand-green to-green-600 text-white px-4 py-1 rounded-full text-xs font-semibold shadow-lg">
+                    ⭐ Most Popular
                   </span>
                 </div>
-                <div className="w-12 h-12 bg-brand-green bg-opacity-10 rounded-lg flex items-center justify-center mb-6">
-                  <Users className="text-brand-green text-xl" />
+                <div className="absolute top-4 right-4 text-brand-green opacity-20">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                </div>
+                <div className="w-16 h-16 bg-gradient-to-br from-brand-green to-green-600 rounded-xl flex items-center justify-center mb-6 shadow-lg animate-float">
+                  <Users className="text-white" size={24} />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">
                   Development & Implementation
@@ -228,18 +267,27 @@ export default function Home() {
                   Full-scale automation development with UiPath technology and ongoing
                   support services.
                 </p>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-sm font-semibold text-brand-green">Timeline</span>
+                  <span className="text-sm text-gray-600">6-12 weeks</span>
+                </div>
                 <Link href="/services">
-                  <Button variant="ghost" className="text-brand-green hover:text-green-700">
+                  <Button className="bg-gradient-to-r from-brand-green to-green-600 text-white hover:from-green-600 hover:to-brand-green w-full">
                     Get Started →
                   </Button>
                 </Link>
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardContent className="p-8">
-                <div className="w-12 h-12 bg-brand-orange bg-opacity-10 rounded-lg flex items-center justify-center mb-6">
-                  <TrendingUp className="text-brand-orange text-xl" />
+            <Card className="hover:shadow-2xl transition-all duration-500 transform hover:scale-105 bg-gradient-to-br from-white to-orange-50 border-0 animate-slideInRight">
+              <CardContent className="p-8 relative">
+                <div className="absolute top-4 right-4 text-brand-orange opacity-20">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M3.5 18.49l6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.97-4-4L3.5 15.49l.58.58-.58.42z"/>
+                  </svg>
+                </div>
+                <div className="w-16 h-16 bg-gradient-to-br from-brand-orange to-orange-600 rounded-xl flex items-center justify-center mb-6 shadow-lg animate-float">
+                  <TrendingUp className="text-white" size={24} />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">
                   Scaling & Optimization
@@ -248,13 +296,28 @@ export default function Home() {
                   Advanced automation strategies for enterprise-scale operations and
                   continuous improvement.
                 </p>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-sm font-semibold text-brand-orange">Timeline</span>
+                  <span className="text-sm text-gray-600">Ongoing</span>
+                </div>
                 <Link href="/services">
-                  <Button variant="ghost" className="text-brand-orange hover:text-orange-700">
+                  <Button variant="ghost" className="text-brand-orange hover:text-orange-700 hover:bg-orange-50 w-full">
                     Explore Options →
                   </Button>
                 </Link>
               </CardContent>
             </Card>
+          </div>
+
+          {/* Process Flow Indicator */}
+          <div className="mt-12 flex justify-center">
+            <div className="flex items-center space-x-4">
+              <div className="w-3 h-3 bg-brand-blue rounded-full animate-pulse-gentle"></div>
+              <div className="w-8 h-1 bg-gray-300 rounded"></div>
+              <div className="w-3 h-3 bg-brand-green rounded-full animate-pulse-gentle"></div>
+              <div className="w-8 h-1 bg-gray-300 rounded"></div>
+              <div className="w-3 h-3 bg-brand-orange rounded-full animate-pulse-gentle"></div>
+            </div>
           </div>
         </div>
       </section>
@@ -375,73 +438,99 @@ export default function Home() {
       <ROICalculator />
       <CaseStudies />
 
-      {/* About Preview */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                About A Automation Company
-              </h2>
-              <p className="text-lg text-gray-600 mb-6">
-                We are a leading UK-based technology consultancy specializing in
-                Robotic Process Automation using UiPath software. Our team of
-                certified consultants serves clients from SMEs to FTSE companies
-                across diverse industries.
-              </p>
+      {/* Visual Stats Section */}
+      <section className="py-16 bg-gradient-to-br from-gray-900 to-blue-900 text-white relative overflow-hidden">
+        {/* Animated background particles */}
+        <div className="absolute inset-0">
+          <div className="absolute top-10 left-10 w-2 h-2 bg-brand-blue rounded-full animate-pulse-gentle"></div>
+          <div className="absolute top-32 right-20 w-3 h-3 bg-brand-green rounded-full animate-float"></div>
+          <div className="absolute bottom-20 left-32 w-2 h-2 bg-brand-orange rounded-full animate-pulse-gentle"></div>
+          <div className="absolute bottom-40 right-10 w-4 h-4 bg-purple-400 rounded-full animate-float"></div>
+        </div>
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16 animate-fadeInUp">
+            <div className="inline-flex items-center bg-white bg-opacity-10 backdrop-blur-sm text-white px-6 py-2 rounded-full text-sm font-medium mb-4">
+              📊 Proven Results
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Numbers That Matter
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Real results from our automation implementations across the UK
+            </p>
+          </div>
 
-              <div className="space-y-4 mb-8">
-                <div className="flex items-center">
-                  <div className="w-8 h-8 bg-brand-blue bg-opacity-10 rounded-lg flex items-center justify-center mr-3">
-                    <Award className="text-brand-blue" size={20} />
-                  </div>
-                  <span className="text-gray-700">
-                    UiPath Gold Partner with certified developers
-                  </span>
-                </div>
-
-                <div className="flex items-center">
-                  <div className="w-8 h-8 bg-brand-green bg-opacity-10 rounded-lg flex items-center justify-center mr-3">
-                    <Users className="text-brand-green" size={20} />
-                  </div>
-                  <span className="text-gray-700">
-                    500+ successful automation implementations
-                  </span>
-                </div>
-
-                <div className="flex items-center">
-                  <div className="w-8 h-8 bg-brand-orange bg-opacity-10 rounded-lg flex items-center justify-center mr-3">
-                    <Clock className="text-brand-orange" size={20} />
-                  </div>
-                  <span className="text-gray-700">
-                    24/7 support and monitoring services
-                  </span>
-                </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="text-center animate-slideInLeft">
+              <div className="w-20 h-20 bg-gradient-to-br from-brand-blue to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 animate-float">
+                <TrendingUp className="text-white" size={32} />
               </div>
-
-              <Link href="/about">
-                <Button className="bg-brand-blue hover:bg-blue-700">
-                  Learn More About Us
-                </Button>
-              </Link>
+              <div className="text-4xl font-bold text-white mb-2">10+</div>
+              <div className="text-gray-300">Years Experience</div>
             </div>
 
-            <div className="relative">
-              <img
-                src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
-                alt="Professional team in modern office environment"
-                className="rounded-xl shadow-lg w-full h-auto"
-              />
+            <div className="text-center animate-fadeInUp">
+              <div className="w-20 h-20 bg-gradient-to-br from-brand-green to-green-500 rounded-full flex items-center justify-center mx-auto mb-4 animate-float">
+                <Users className="text-white" size={32} />
+              </div>
+              <div className="text-4xl font-bold text-white mb-2">500+</div>
+              <div className="text-gray-300">Implementations</div>
+            </div>
+
+            <div className="text-center animate-fadeInUp">
+              <div className="w-20 h-20 bg-gradient-to-br from-brand-orange to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4 animate-float">
+                <Award className="text-white" size={32} />
+              </div>
+              <div className="text-4xl font-bold text-white mb-2">200+</div>
+              <div className="text-gray-300">Happy Clients</div>
+            </div>
+
+            <div className="text-center animate-slideInRight">
+              <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 animate-float">
+                <Clock className="text-white" size={32} />
+              </div>
+              <div className="text-4xl font-bold text-white mb-2">95%</div>
+              <div className="text-gray-300">Success Rate</div>
+            </div>
+          </div>
+
+          <div className="mt-16 text-center">
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 max-w-4xl mx-auto">
+              <h3 className="text-2xl font-bold mb-4">About Desk Automate</h3>
+              <p className="text-lg text-gray-300 mb-6">
+                Leading UK-based technology consultancy specializing in Robotic Process Automation using UiPath software. 
+                Serving clients from SMEs to FTSE companies across diverse industries.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/about">
+                  <Button className="bg-white text-gray-900 hover:bg-gray-100 px-6 py-3">
+                    Learn More About Us
+                  </Button>
+                </Link>
+                <Link href="/contact">
+                  <Button variant="outline" className="border-white text-white hover:bg-white hover:text-gray-900 px-6 py-3">
+                    Get In Touch
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Contact CTA */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+      <section className="py-16 bg-gradient-to-br from-blue-50 to-white relative overflow-hidden">
+        {/* Background decoration */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-brand-blue opacity-5 rounded-full translate-x-48 -translate-y-48"></div>
+        <div className="absolute bottom-0 left-0 w-72 h-72 bg-brand-green opacity-5 rounded-full -translate-x-36 translate-y-36"></div>
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 animate-fadeInUp">
+            <div className="inline-flex items-center bg-gradient-to-r from-brand-blue to-blue-600 text-white px-6 py-2 rounded-full text-sm font-medium mb-4">
+              🚀 Ready to Transform?
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Get Started with Automation
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -450,36 +539,36 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-            <Card className="text-center p-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <Card className="text-center p-6 hover:shadow-xl transition-all duration-300 transform hover:scale-105 bg-gradient-to-br from-white to-blue-50 border-0 animate-slideInLeft">
               <CardContent className="p-0">
-                <div className="w-10 h-10 bg-brand-blue bg-opacity-10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Phone className="text-brand-blue" />
+                <div className="w-16 h-16 bg-gradient-to-br from-brand-blue to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg animate-pulse-gentle">
+                  <Phone className="text-white" size={24} />
                 </div>
-                <h4 className="font-semibold text-gray-900 mb-2">Phone</h4>
-                <p className="text-gray-600">0845 643 4410</p>
+                <h4 className="text-xl font-semibold text-gray-900 mb-2">Phone</h4>
+                <p className="text-lg font-semibold text-brand-blue mb-1">0845 643 4410</p>
                 <p className="text-sm text-gray-500">Monday - Friday, 9am - 6pm</p>
               </CardContent>
             </Card>
 
-            <Card className="text-center p-6">
+            <Card className="text-center p-6 hover:shadow-xl transition-all duration-300 transform hover:scale-105 bg-gradient-to-br from-white to-green-50 border-0 animate-fadeInUp">
               <CardContent className="p-0">
-                <div className="w-10 h-10 bg-brand-green bg-opacity-10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Mail className="text-brand-green" />
+                <div className="w-16 h-16 bg-gradient-to-br from-brand-green to-green-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg animate-pulse-gentle">
+                  <Mail className="text-white" size={24} />
                 </div>
-                <h4 className="font-semibold text-gray-900 mb-2">Email</h4>
-                <p className="text-gray-600">info@aautomation.co.uk</p>
+                <h4 className="text-xl font-semibold text-gray-900 mb-2">Email</h4>
+                <p className="text-lg font-semibold text-brand-green mb-1">info@deskautomate.co.uk</p>
                 <p className="text-sm text-gray-500">We respond within 24 hours</p>
               </CardContent>
             </Card>
 
-            <Card className="text-center p-6">
+            <Card className="text-center p-6 hover:shadow-xl transition-all duration-300 transform hover:scale-105 bg-gradient-to-br from-white to-orange-50 border-0 animate-slideInRight">
               <CardContent className="p-0">
-                <div className="w-10 h-10 bg-brand-orange bg-opacity-10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <MapPin className="text-brand-orange" />
+                <div className="w-16 h-16 bg-gradient-to-br from-brand-orange to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg animate-pulse-gentle">
+                  <MapPin className="text-white" size={24} />
                 </div>
-                <h4 className="font-semibold text-gray-900 mb-2">Location</h4>
-                <p className="text-gray-600">United Kingdom</p>
+                <h4 className="text-xl font-semibold text-gray-900 mb-2">Location</h4>
+                <p className="text-lg font-semibold text-brand-orange mb-1">United Kingdom</p>
                 <p className="text-sm text-gray-500">Serving clients nationwide</p>
               </CardContent>
             </Card>
@@ -487,10 +576,12 @@ export default function Home() {
 
           <div className="text-center">
             <Link href="/contact">
-              <Button className="bg-brand-blue hover:bg-blue-700 px-8 py-3 text-lg">
+              <Button className="bg-gradient-to-r from-brand-blue to-blue-600 hover:from-blue-600 hover:to-brand-blue text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                <Rocket className="w-5 h-5 mr-2" />
                 Schedule Free Consultation
               </Button>
             </Link>
+            <p className="text-sm text-gray-500 mt-4">No commitment required • 30-minute consultation • Expert advice</p>
           </div>
         </div>
       </section>
