@@ -151,34 +151,26 @@ export default function About() {
               </div>
             </div>
 
-            <div className="relative">
-              <img
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
-                alt="UiPath automation dashboard and analytics"
-                className="rounded-xl shadow-lg w-full h-auto"
-              />
-
-              {/* Stats Overlay */}
-              <div className="absolute inset-0 bg-brand-blue bg-opacity-10 rounded-xl flex items-end p-6">
-                <Card className="w-full">
-                  <CardContent className="p-4">
-                    <div className="grid grid-cols-3 gap-4 text-center">
-                      <div>
-                        <div className="text-xl font-bold text-brand-blue">10+</div>
-                        <div className="text-xs text-gray-600">Years Experience</div>
-                      </div>
-                      <div>
-                        <div className="text-xl font-bold text-brand-green">200+</div>
-                        <div className="text-xs text-gray-600">Happy Clients</div>
-                      </div>
-                      <div>
-                        <div className="text-xl font-bold text-brand-orange">95%</div>
-                        <div className="text-xs text-gray-600">Success Rate</div>
-                      </div>
+            <div className="bg-gradient-to-br from-blue-50 to-white p-8 rounded-xl">
+              <Card className="w-full">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Our Impact</h3>
+                  <div className="grid grid-cols-3 gap-6 text-center">
+                    <div>
+                      <div className="text-3xl font-bold text-brand-blue">10+</div>
+                      <div className="text-sm text-gray-600">Years Experience</div>
                     </div>
-                  </CardContent>
-                </Card>
-              </div>
+                    <div>
+                      <div className="text-3xl font-bold text-brand-green">200+</div>
+                      <div className="text-sm text-gray-600">Happy Clients</div>
+                    </div>
+                    <div>
+                      <div className="text-3xl font-bold text-brand-orange">95%</div>
+                      <div className="text-sm text-gray-600">Success Rate</div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>
