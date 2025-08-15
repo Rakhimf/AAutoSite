@@ -214,8 +214,8 @@ export default function Home() {
                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                   </svg>
                 </div>
-                <div className="w-16 h-16 bg-gradient-to-br from-brand-blue to-blue-600 rounded-xl flex items-center justify-center mb-6 shadow-lg animate-float">
-                  <TrendingUp className="text-white" size={24} />
+                <div className="w-16 h-16 bg-gray-100 rounded-xl flex items-center justify-center mb-6 shadow-lg animate-float">
+                  <TrendingUp className="text-brand-blue" size={24} />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">
                   Discovery & Assessment
