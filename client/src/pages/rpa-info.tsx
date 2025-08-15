@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import { Check, Bot, Zap, Shield, ChartBar, Clock, Users, Target, Settings, TrendingUp, Workflow } from "lucide-react";
+import { Check, Bot, Zap, Shield, ChartBar, Clock, Users, Target, Settings, TrendingUp, Workflow, Phone, Mail } from "lucide-react";
 
 export default function RPAInfo() {
   return (

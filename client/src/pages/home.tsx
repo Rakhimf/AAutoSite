@@ -31,9 +31,6 @@ export default function Home() {
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 animate-fadeInUp">
-            <div className="inline-flex items-center bg-gradient-to-r from-brand-blue to-blue-600 text-white px-6 py-2 rounded-full text-sm font-medium mb-4">
-              Award-Winning RPA Solutions
-            </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Why Choose Desk Automate?
             </h2>
@@ -200,9 +197,6 @@ export default function Home() {
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-fadeInUp">
-            <div className="inline-flex items-center bg-gradient-to-r from-brand-green to-green-600 text-white px-6 py-2 rounded-full text-sm font-medium mb-4">
-              Comprehensive RPA Services
-            </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Our RPA Implementation Services
             </h2>
@@ -447,9 +441,6 @@ export default function Home() {
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-fadeInUp">
-            <div className="inline-flex items-center bg-white bg-opacity-10 backdrop-blur-sm text-white px-6 py-2 rounded-full text-sm font-medium mb-4">
-              Proven Results
-            </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Numbers That Matter
             </h2>
@@ -521,9 +512,6 @@ export default function Home() {
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 animate-fadeInUp">
-            <div className="inline-flex items-center bg-gradient-to-r from-brand-blue to-blue-600 text-white px-6 py-2 rounded-full text-sm font-medium mb-4">
-              Ready to Transform?
-            </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Get Started with Automation
             </h2>
