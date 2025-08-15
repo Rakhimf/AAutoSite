@@ -18,28 +18,61 @@ export default function Services() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <section className="bg-gradient-to-br from-blue-50 to-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              RPA Implementation Services
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive automation solutions designed to transform your business 
-              operations and deliver <span className="text-brand-blue font-semibold">measurable results</span>
-            </p>
+      <section className="bg-gradient-to-br from-blue-50 to-white py-16 relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Cg fill-rule=%22evenodd%22%3E%3Cg fill=%22%232563eb%22 fill-opacity=%220.4%22%3E%3Cpath opacity=%22.5%22 d=%22M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] animate-pulse-gentle"></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="animate-slideInLeft">
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                RPA Implementation Services
+              </h1>
+              <p className="text-xl text-gray-600 max-w-3xl">
+                Comprehensive automation solutions designed to transform your business 
+                operations and deliver <span className="text-brand-blue font-semibold">measurable results</span>
+              </p>
+            </div>
+            
+            {/* Hero Image */}
+            <div className="animate-slideInRight">
+              <div className="relative">
+                <img 
+                  src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
+                  alt="UiPath RPA Dashboard showing automation workflows"
+                  className="rounded-xl shadow-2xl w-full"
+                />
+                <div className="absolute -bottom-4 -right-4 bg-white rounded-lg shadow-lg p-4">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                    <span className="text-sm font-medium text-gray-900">Live Automation</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Service Packages */}
-      <section className="py-16 section-bg">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+      <section className="py-16 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+        {/* Floating Elements */}
+        <div className="absolute top-10 left-10 w-20 h-20 bg-blue-100 rounded-full opacity-50 animate-float"></div>
+        <div className="absolute bottom-10 right-10 w-16 h-16 bg-green-100 rounded-full opacity-50 animate-float" style={{animationDelay: '2s'}}></div>
+        <div className="absolute top-1/2 right-1/4 w-12 h-12 bg-orange-100 rounded-full opacity-50 animate-float" style={{animationDelay: '4s'}}></div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Service Packages</h2>
             <p className="text-xl text-gray-600">
               Choose the right level of support for your <span className="text-brand-blue font-semibold">automation journey</span>
             </p>
+            {/* Visual separator */}
+            <div className="flex justify-center mt-6">
+              <div className="w-24 h-1 bg-gradient-to-r from-brand-blue to-brand-green rounded-full"></div>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

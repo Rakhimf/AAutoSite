@@ -95,23 +95,64 @@ export default function Industries() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <section className="bg-gradient-to-br from-blue-50 to-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Industry-Specific RPA Solutions
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Tailored automation implementations designed for the unique challenges 
-              and opportunities in your industry
-            </p>
+      <section className="bg-gradient-to-br from-blue-50 to-white py-16 relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Cg fill-rule=%22evenodd%22%3E%3Cg fill=%22%232563eb%22 fill-opacity=%220.4%22%3E%3Cpath opacity=%22.5%22 d=%22M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] animate-pulse-gentle"></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="animate-slideInLeft">
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Industry-Specific RPA Solutions
+              </h1>
+              <p className="text-xl text-gray-600 mb-8">
+                Tailored automation implementations designed for the unique challenges 
+                and opportunities in your industry
+              </p>
+              
+              {/* Industry Stats */}
+              <div className="grid grid-cols-2 gap-6">
+                <div className="text-center p-4 bg-white rounded-lg shadow-sm">
+                  <div className="text-2xl font-bold text-brand-blue">4</div>
+                  <div className="text-sm text-gray-600">Key Industries</div>
+                </div>
+                <div className="text-center p-4 bg-white rounded-lg shadow-sm">
+                  <div className="text-2xl font-bold text-brand-green">80%</div>
+                  <div className="text-sm text-gray-600">Avg. Cost Reduction</div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Hero Image */}
+            <div className="animate-slideInRight">
+              <div className="relative">
+                <img 
+                  src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
+                  alt="Various industries including manufacturing, finance, healthcare, and logistics"
+                  className="rounded-xl shadow-2xl w-full"
+                />
+                <div className="absolute -bottom-4 -right-4 bg-brand-orange rounded-lg shadow-lg p-4 text-white">
+                  <div className="flex items-center space-x-2">
+                    <Building2 className="w-5 h-5" />
+                    <span className="text-sm font-medium">Multi-Industry</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Industries Grid */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+        {/* Floating Elements */}
+        <div className="absolute top-20 left-10 w-16 h-16 bg-blue-100 rounded-full opacity-30 animate-float"></div>
+        <div className="absolute bottom-40 right-20 w-20 h-20 bg-green-100 rounded-full opacity-30 animate-float" style={{animationDelay: '2s'}}></div>
+        <div className="absolute top-1/2 left-1/4 w-12 h-12 bg-orange-100 rounded-full opacity-30 animate-float" style={{animationDelay: '4s'}}></div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="space-y-16">
             {industries.map((industry, index) => (
               <div 
