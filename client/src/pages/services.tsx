@@ -16,42 +16,43 @@ import {
 
 export default function Services() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-b from-black to-gray-900">
       {/* Header */}
-      <section className="bg-gradient-to-br from-blue-50 to-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-gradient-to-br from-black via-gray-900 to-black py-16 matrix-bg relative">
+        <div className="absolute inset-0 cyber-gradient opacity-20"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              RPA Implementation Services
+            <h1 className="text-4xl md:text-5xl font-bold font-cyber text-white mb-6 cyber-text-glow">
+              RPA DEPLOYMENT PROTOCOLS
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive automation solutions designed to transform your business 
-              operations and drive measurable results
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Advanced cybernetic automation systems engineered to eliminate human inefficiencies 
+              and deliver <span className="text-brand-cyan font-semibold">quantifiable operational transformation</span>
             </p>
           </div>
         </div>
       </section>
 
       {/* Service Packages */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gradient-to-b from-gray-900 to-black matrix-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Service Packages</h2>
-            <p className="text-xl text-gray-600">
-              Choose the right level of support for your automation journey
+            <h2 className="text-3xl font-bold font-cyber text-white mb-4 cyber-text-glow">DEPLOYMENT PROTOCOLS</h2>
+            <p className="text-xl text-gray-300">
+              Select your optimal <span className="text-brand-cyan font-semibold">robotic intelligence configuration</span>
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Bronze Package */}
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="cyber-card hover:shadow-2xl transition-all duration-300 hover:cyber-glow">
               <CardHeader>
-                <div className="w-12 h-12 bg-amber-600 bg-opacity-10 rounded-lg flex items-center justify-center mb-4">
-                  <Settings className="text-amber-600" size={24} />
+                <div className="w-12 h-12 bg-amber-600/20 rounded-lg flex items-center justify-center mb-4 cyber-border">
+                  <Settings className="text-amber-400" size={24} />
                 </div>
-                <CardTitle className="text-xl text-amber-600">Bronze Package</CardTitle>
-                <p className="text-gray-600 mt-2">
-                  Perfect for small businesses looking to automate their first process.
+                <CardTitle className="text-xl text-amber-400 font-cyber">BRONZE PROTOCOL</CardTitle>
+                <p className="text-gray-400 mt-2">
+                  Entry-level cybernetic deployment for initial process optimization.
                 </p>
               </CardHeader>
               <CardContent>
@@ -80,29 +81,29 @@ export default function Services() {
                 </div>
                 
                 <Link href="/contact">
-                  <Button variant="outline" className="w-full border-amber-600 text-amber-600 hover:bg-amber-600 hover:text-white">
-                    Get Started
+                  <Button className="w-full neon-button border-amber-400 text-amber-400 font-cyber">
+                    ACTIVATE
                   </Button>
                 </Link>
               </CardContent>
             </Card>
 
             {/* Silver Package - Most Popular */}
-            <Card className="relative hover:shadow-lg transition-shadow border-2 border-brand-green">
+            <Card className="relative cyber-card hover:shadow-2xl transition-all duration-300 border-2 border-brand-neon cyber-glow">
               <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                <Badge className="bg-brand-green text-white">
+                <Badge className="bg-brand-neon text-black font-cyber">
                   <Star className="w-3 h-3 mr-1" />
-                  Most Popular
+                  OPTIMAL
                 </Badge>
               </div>
               
               <CardHeader>
-                <div className="w-12 h-12 bg-gray-400 bg-opacity-10 rounded-lg flex items-center justify-center mb-4">
-                  <Settings className="text-gray-500" size={24} />
+                <div className="w-12 h-12 bg-gray-400/20 rounded-lg flex items-center justify-center mb-4 cyber-border">
+                  <Settings className="text-gray-300" size={24} />
                 </div>
-                <CardTitle className="text-xl text-gray-500">Silver Package</CardTitle>
-                <p className="text-gray-600 mt-2">
-                  Ideal for growing businesses ready to scale their automation.
+                <CardTitle className="text-xl text-gray-300 font-cyber">SILVER PROTOCOL</CardTitle>
+                <p className="text-gray-400 mt-2">
+                  Enhanced multi-bot deployment for enterprise-grade automation scaling.
                 </p>
               </CardHeader>
               <CardContent>
@@ -131,22 +132,22 @@ export default function Services() {
                 </div>
                 
                 <Link href="/contact">
-                  <Button className="w-full bg-gray-500 hover:bg-gray-600">
-                    Get Started
+                  <Button className="w-full bg-brand-neon hover:bg-brand-neon/80 text-black font-cyber font-bold cyber-pulse">
+                    DEPLOY NOW
                   </Button>
                 </Link>
               </CardContent>
             </Card>
 
             {/* Gold Package */}
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="cyber-card hover:shadow-2xl transition-all duration-300 hover:cyber-glow">
               <CardHeader>
-                <div className="w-12 h-12 bg-yellow-500 bg-opacity-10 rounded-lg flex items-center justify-center mb-4">
-                  <TrendingUp className="text-yellow-500" size={24} />
+                <div className="w-12 h-12 bg-yellow-500/20 rounded-lg flex items-center justify-center mb-4 cyber-border">
+                  <TrendingUp className="text-yellow-400" size={24} />
                 </div>
-                <CardTitle className="text-xl text-yellow-500">Gold Package</CardTitle>
-                <p className="text-gray-600 mt-2">
-                  Premium solution for enterprises requiring multiple automations.
+                <CardTitle className="text-xl text-yellow-400 font-cyber">GOLD PROTOCOL</CardTitle>
+                <p className="text-gray-400 mt-2">
+                  Maximum-security robotic intelligence array for mission-critical operations.
                 </p>
               </CardHeader>
               <CardContent>
@@ -175,8 +176,8 @@ export default function Services() {
                 </div>
                 
                 <Link href="/contact">
-                  <Button variant="outline" className="w-full border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-white">
-                    Get Started
+                  <Button className="w-full neon-button border-yellow-400 text-yellow-400 font-cyber">
+                    ENGAGE
                   </Button>
                 </Link>
               </CardContent>

@@ -3,14 +3,14 @@ import { Phone, Mail } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="bg-black border-t border-brand-cyan/20 text-white py-12 matrix-bg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Desk Automate</h3>
+            <h3 className="text-xl font-bold font-cyber mb-4 text-brand-cyan cyber-text-glow">DESK AUTOMATE</h3>
             <p className="text-gray-400 mb-4">
-              Leading UK RPA consultancy specializing in UiPath solutions for business transformation.
+              Elite UK RPA intelligence unit deploying advanced UiPath cybernetic systems for enterprise transformation.
             </p>
             <div className="space-y-2">
               <div className="flex items-center text-gray-400">
@@ -26,7 +26,7 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Services</h4>
+            <h4 className="text-lg font-semibold font-cyber mb-4 text-brand-neon">SYSTEMS</h4>
             <ul className="space-y-2 text-gray-400">
               <li>
                 <Link href="/services">
@@ -53,7 +53,7 @@ export default function Footer() {
 
           {/* Industries */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Industries</h4>
+            <h4 className="text-lg font-semibold font-cyber mb-4 text-brand-purple">SECTORS</h4>
             <ul className="space-y-2 text-gray-400">
               <li>
                 <Link href="/industries">
@@ -80,7 +80,7 @@ export default function Footer() {
 
           {/* Resources */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Resources</h4>
+            <h4 className="text-lg font-semibold font-cyber mb-4 text-brand-orange">INTEL</h4>
             <ul className="space-y-2 text-gray-400">
               <li>
                 <Link href="/rpa-information">
