@@ -1,5 +1,5 @@
 import HeroSection from "@/components/hero-section";
-import ROICalculator from "@/components/roi-calculator";
+
 import CaseStudies from "@/components/case-studies";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -426,7 +426,7 @@ export default function Home() {
         </div>
       </section>
 
-      <ROICalculator />
+
       <CaseStudies />
 
       {/* Visual Stats Section */}
