@@ -153,8 +153,8 @@ export default function About() {
 
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
-                alt="UiPath automation development team"
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+                alt="UiPath automation dashboard and analytics"
                 className="rounded-xl shadow-lg w-full h-auto"
               />
 
