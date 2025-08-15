@@ -8,7 +8,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Desk Automate</h3>
+            <div className="flex items-center mb-4">
+              <h3 className="text-xl font-bold">Desk Automate</h3>
+            </div>
             <p className="text-gray-400 mb-4">
               Leading UK RPA consultancy specializing in UiPath solutions for business transformation.
             </p>
