@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
+import { Slider } from "@/components/ui/slider";
 import { Link } from "wouter";
 import { Calculator, TrendingUp, Clock, DollarSign, Users, Building, ArrowRight, Download, BarChart3, PieChart, CheckCircle } from "lucide-react";
 
@@ -51,6 +52,9 @@ export default function ROICalculator() {
 
   const [results, setResults] = useState<ROIResults | null>(null);
   const [showResults, setShowResults] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [isCalculating, setIsCalculating] = useState(false);
+  const [validationErrors, setValidationErrors] = useState<string[]>([]);
 
   const companySizes = [
     { value: "startup", label: "Startup (1-50 employees)" },
@@ -72,8 +76,37 @@ export default function ROICalculator() {
     { value: "other", label: "Other" }
   ];
 
+  const validateInputs = (): string[] => {
+    const errors: string[] = [];
+    
+    if (!inputs.companySize) errors.push("Please select your company size");
+    if (!inputs.industry) errors.push("Please select your industry");
+    if (inputs.processesCount <= 0) errors.push("Number of processes must be greater than 0");
+    if (inputs.employeesPerProcess <= 0) errors.push("Employees per process must be greater than 0");
+    if (inputs.hoursPerDay <= 0) errors.push("Hours per day must be greater than 0");
+    if (inputs.costPerHour < 10) errors.push("Cost per hour seems too low (minimum £10)");
+    if (inputs.automationPercentage < 10 || inputs.automationPercentage > 100) errors.push("Automation percentage must be between 10% and 100%");
+    if (inputs.implementationCost < 5000) errors.push("Implementation cost seems too low for RPA project");
+    if (inputs.licenseCount <= 0) errors.push("Number of licenses must be at least 1");
+    
+    return errors;
+  };
+
   const calculateROI = () => {
-    const workingDaysPerYear = 250;
+    setIsCalculating(true);
+    const errors = validateInputs();
+    
+    if (errors.length > 0) {
+      setValidationErrors(errors);
+      setIsCalculating(false);
+      return;
+    }
+    
+    setValidationErrors([]);
+    
+    // Simulate calculation delay for better UX
+    setTimeout(() => {
+      const workingDaysPerYear = 250;
     const discountRate = 0.08; // 8% discount rate for NPV calculation
 
     // Current costs
@@ -120,6 +153,8 @@ export default function ROICalculator() {
 
     setResults(calculatedResults);
     setShowResults(true);
+    setIsCalculating(false);
+    }, 1000);
   };
 
   const formatCurrency = (amount: number) => {
@@ -140,6 +175,11 @@ export default function ROICalculator() {
       ...prev,
       [key]: value
     }));
+    
+    // Clear validation errors when inputs change
+    if (validationErrors.length > 0) {
+      setValidationErrors([]);
+    }
   };
 
   const resetCalculator = () => {
@@ -157,6 +197,41 @@ export default function ROICalculator() {
     });
     setResults(null);
     setShowResults(false);
+    setValidationErrors([]);
+    setIsCalculating(false);
+  };
+
+  // Pre-populate defaults based on company size
+  const handleCompanySizeChange = (size: string) => {
+    updateInput('companySize', size);
+    
+    // Auto-adjust defaults based on company size
+    switch(size) {
+      case 'startup':
+        updateInput('processesCount', 3);
+        updateInput('employeesPerProcess', 1);
+        updateInput('implementationCost', 25000);
+        updateInput('licenseCount', 2);
+        break;
+      case 'small':
+        updateInput('processesCount', 5);
+        updateInput('employeesPerProcess', 2);
+        updateInput('implementationCost', 50000);
+        updateInput('licenseCount', 3);
+        break;
+      case 'medium':
+        updateInput('processesCount', 8);
+        updateInput('employeesPerProcess', 3);
+        updateInput('implementationCost', 100000);
+        updateInput('licenseCount', 5);
+        break;
+      case 'large':
+        updateInput('processesCount', 15);
+        updateInput('employeesPerProcess', 5);
+        updateInput('implementationCost', 200000);
+        updateInput('licenseCount', 10);
+        break;
+    }
   };
 
   const exportResults = () => {
@@ -304,7 +379,7 @@ export default function ROICalculator() {
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <Label htmlFor="companySize">Company Size</Label>
-                      <Select value={inputs.companySize} onValueChange={(value) => updateInput('companySize', value)}>
+                      <Select value={inputs.companySize} onValueChange={handleCompanySizeChange}>
                         <SelectTrigger data-testid="select-company-size">
                           <SelectValue placeholder="Select size" />
                         </SelectTrigger>
@@ -389,16 +464,28 @@ export default function ROICalculator() {
                     </div>
 
                     <div className="col-span-2">
-                      <Label htmlFor="automationPercentage">Automation Percentage (%)</Label>
-                      <Input
-                        id="automationPercentage"
-                        type="number"
-                        min="10"
-                        max="100"
-                        value={inputs.automationPercentage}
-                        onChange={(e) => updateInput('automationPercentage', parseInt(e.target.value) || 0)}
-                        data-testid="input-automation-percentage"
-                      />
+                      <Label htmlFor="automationPercentage">
+                        Automation Percentage: 
+                        <span className={`ml-1 font-bold ${inputs.automationPercentage >= 80 ? 'text-green-600' : inputs.automationPercentage >= 60 ? 'text-yellow-600' : 'text-red-600'}`}>
+                          {inputs.automationPercentage}%
+                        </span>
+                      </Label>
+                      <div className="mt-2">
+                        <Slider
+                          value={[inputs.automationPercentage]}
+                          onValueChange={(value) => updateInput('automationPercentage', value[0])}
+                          max={100}
+                          min={10}
+                          step={5}
+                          className="mb-2"
+                          data-testid="slider-automation"
+                        />
+                        <div className="flex justify-between text-xs text-gray-500">
+                          <span>10% (Low)</span>
+                          <span>50% (Medium)</span>
+                          <span>100% (Full)</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -448,19 +535,33 @@ export default function ROICalculator() {
                   </div>
                 </div>
 
+                {/* Validation Errors */}
+                {validationErrors.length > 0 && (
+                  <div className="bg-red-50 border border-red-200 rounded-lg p-4">
+                    <h4 className="font-medium text-red-900 mb-2">Please fix the following issues:</h4>
+                    <ul className="space-y-1">
+                      {validationErrors.map((error, index) => (
+                        <li key={index} className="text-sm text-red-700">• {error}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
                 <div className="flex gap-4 pt-4">
                   <Button 
                     onClick={calculateROI} 
                     className="flex-1 bg-brand-blue hover:bg-blue-700"
                     data-testid="button-calculate"
+                    disabled={isCalculating}
                   >
                     <BarChart3 className="w-4 h-4 mr-2" />
-                    Calculate ROI
+                    {isCalculating ? 'Calculating...' : 'Calculate ROI'}
                   </Button>
                   <Button 
                     onClick={resetCalculator} 
                     variant="outline"
                     data-testid="button-reset"
+                    disabled={isCalculating}
                   >
                     Reset
                   </Button>
@@ -468,8 +569,18 @@ export default function ROICalculator() {
               </CardContent>
             </Card>
 
+            {/* Loading State */}
+            {isCalculating && (
+              <div className="flex items-center justify-center p-12 animate-fadeInUp">
+                <div className="text-center">
+                  <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-brand-blue mx-auto mb-4"></div>
+                  <p className="text-gray-600">Calculating your ROI analysis...</p>
+                </div>
+              </div>
+            )}
+
             {/* Results */}
-            {showResults && results && (
+            {showResults && results && !isCalculating && (
               <div className="space-y-6 animate-fadeInUp">
                 <Card className="border-brand-green">
                   <CardHeader>
