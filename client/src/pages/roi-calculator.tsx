@@ -8,7 +8,7 @@ import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
 import { Slider } from "@/components/ui/slider";
 import { Link } from "wouter";
-import { Calculator, TrendingUp, Clock, DollarSign, Users, Building, ArrowRight, Download, BarChart3, PieChart, CheckCircle } from "lucide-react";
+import { Calculator, TrendingUp, Clock, DollarSign, Users, Building, ArrowRight, Download, BarChart3, PieChart, CheckCircle, Factory, Briefcase, Heart, ShoppingCart, Truck, Shield, Phone, GraduationCap, Globe } from "lucide-react";
 
 interface CalculatorInputs {
   companySize: string;
@@ -376,33 +376,94 @@ export default function ROICalculator() {
                 <div className="space-y-4">
                   <h3 className="text-lg font-semibold text-gray-900">Company Information</h3>
                   
-                  <div className="grid grid-cols-2 gap-4">
-                    <div>
-                      <Label htmlFor="companySize">Company Size</Label>
-                      <Select value={inputs.companySize} onValueChange={handleCompanySizeChange}>
-                        <SelectTrigger data-testid="select-company-size">
-                          <SelectValue placeholder="Select size" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          {companySizes.map((size) => (
-                            <SelectItem key={size.value} value={size.value}>{size.label}</SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
+                  {/* Visual Company Size Selection */}
+                  <div>
+                    <div className="flex items-center justify-between mb-4">
+                      <Label className="text-lg font-semibold">Company Size</Label>
+                      {inputs.companySize && (
+                        <Badge className="bg-blue-100 text-blue-800 border-blue-300">
+                          <CheckCircle className="w-3 h-3 mr-1" />
+                          Selected: {companySizes.find(s => s.value === inputs.companySize)?.label}
+                        </Badge>
+                      )}
                     </div>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+                      {companySizes.map((size) => (
+                        <button
+                          key={size.value}
+                          onClick={() => handleCompanySizeChange(size.value)}
+                          className={`p-4 rounded-lg border-2 transition-all duration-300 text-center hover:shadow-lg hover:transform hover:scale-105 ${
+                            inputs.companySize === size.value
+                              ? 'border-brand-blue bg-blue-50 text-brand-blue shadow-lg scale-105 ring-2 ring-blue-200'
+                              : 'border-gray-200 hover:border-blue-300 bg-white hover:bg-blue-50'
+                          }`}
+                          data-testid={`button-company-${size.value}`}
+                        >
+                          <div className="mb-2">
+                            <Users className={`w-6 h-6 mx-auto ${inputs.companySize === size.value ? 'text-brand-blue' : 'text-gray-400'}`} />
+                          </div>
+                          <div className="font-medium text-sm">{size.label}</div>
+                          <div className="text-xs text-gray-500 mt-1">
+                            {size.value === 'startup' && '1-10 employees'}
+                            {size.value === 'small' && '11-50 employees'}
+                            {size.value === 'medium' && '51-250 employees'}
+                            {size.value === 'large' && '250+ employees'}
+                          </div>
+                        </button>
+                      ))}
+                    </div>
+                  </div>
 
-                    <div>
-                      <Label htmlFor="industry">Industry</Label>
-                      <Select value={inputs.industry} onValueChange={(value) => updateInput('industry', value)}>
-                        <SelectTrigger data-testid="select-industry">
-                          <SelectValue placeholder="Select industry" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          {industries.map((industry) => (
-                            <SelectItem key={industry.value} value={industry.value}>{industry.label}</SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
+                  {/* Visual Industry Selection */}
+                  <div>
+                    <div className="flex items-center justify-between mb-4">
+                      <Label className="text-lg font-semibold">Industry</Label>
+                      {inputs.industry && (
+                        <Badge className="bg-green-100 text-green-800 border-green-300">
+                          <CheckCircle className="w-3 h-3 mr-1" />
+                          Selected: {industries.find(i => i.value === inputs.industry)?.label}
+                        </Badge>
+                      )}
+                    </div>
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-6">
+                      {industries.map((industry) => (
+                        <button
+                          key={industry.value}
+                          onClick={() => updateInput('industry', industry.value)}
+                          className={`p-4 rounded-lg border-2 transition-all duration-300 text-center hover:shadow-lg hover:transform hover:scale-105 ${
+                            inputs.industry === industry.value
+                              ? 'border-brand-green bg-green-50 text-brand-green shadow-lg scale-105 ring-2 ring-green-200'
+                              : 'border-gray-200 hover:border-green-300 bg-white hover:bg-green-50'
+                          }`}
+                          data-testid={`button-industry-${industry.value}`}
+                        >
+                          <div className="mb-2">
+                            {industry.value === 'manufacturing' && <Factory className={`w-6 h-6 mx-auto ${inputs.industry === industry.value ? 'text-brand-green' : 'text-gray-400'}`} />}
+                            {industry.value === 'finance' && <DollarSign className={`w-6 h-6 mx-auto ${inputs.industry === industry.value ? 'text-brand-green' : 'text-gray-400'}`} />}
+                            {industry.value === 'healthcare' && <Heart className={`w-6 h-6 mx-auto ${inputs.industry === industry.value ? 'text-brand-green' : 'text-gray-400'}`} />}
+                            {industry.value === 'retail' && <ShoppingCart className={`w-6 h-6 mx-auto ${inputs.industry === industry.value ? 'text-brand-green' : 'text-gray-400'}`} />}
+                            {industry.value === 'logistics' && <Truck className={`w-6 h-6 mx-auto ${inputs.industry === industry.value ? 'text-brand-green' : 'text-gray-400'}`} />}
+                            {industry.value === 'insurance' && <Shield className={`w-6 h-6 mx-auto ${inputs.industry === industry.value ? 'text-brand-green' : 'text-gray-400'}`} />}
+                            {industry.value === 'telecom' && <Phone className={`w-6 h-6 mx-auto ${inputs.industry === industry.value ? 'text-brand-green' : 'text-gray-400'}`} />}
+                            {industry.value === 'government' && <Building className={`w-6 h-6 mx-auto ${inputs.industry === industry.value ? 'text-brand-green' : 'text-gray-400'}`} />}
+                            {industry.value === 'education' && <GraduationCap className={`w-6 h-6 mx-auto ${inputs.industry === industry.value ? 'text-brand-green' : 'text-gray-400'}`} />}
+                            {industry.value === 'other' && <Globe className={`w-6 h-6 mx-auto ${inputs.industry === industry.value ? 'text-brand-green' : 'text-gray-400'}`} />}
+                          </div>
+                          <div className="font-medium text-sm">{industry.label}</div>
+                          <div className="text-xs text-gray-500 mt-1">
+                            {industry.value === 'manufacturing' && 'Production & Assembly'}
+                            {industry.value === 'finance' && 'Banking & Insurance'}
+                            {industry.value === 'healthcare' && 'Medical & Pharma'}
+                            {industry.value === 'retail' && 'Sales & E-commerce'}
+                            {industry.value === 'logistics' && 'Supply Chain'}
+                            {industry.value === 'insurance' && 'Risk & Claims'}
+                            {industry.value === 'telecom' && 'Communications'}
+                            {industry.value === 'government' && 'Public Sector'}
+                            {industry.value === 'education' && 'Academic & Training'}
+                            {industry.value === 'other' && 'Custom Solutions'}
+                          </div>
+                        </button>
+                      ))}
                     </div>
                   </div>
                 </div>
