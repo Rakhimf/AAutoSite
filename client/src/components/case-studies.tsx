@@ -15,7 +15,7 @@ export default function CaseStudies() {
         { value: "6", label: "Months ROI", color: "text-brand-orange" },
       ],
       quote:
-        "A Automation transformed our production planning. We now have real-time visibility and our team can focus on strategic initiatives.",
+        "Desk Automate transformed our production planning. We now have real-time visibility and our team can focus on strategic initiatives.",
       color: "brand-blue",
     },
     {

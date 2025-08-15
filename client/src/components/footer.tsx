@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4">A Automation Company</h3>
+            <h3 className="text-xl font-bold mb-4">Desk Automate</h3>
             <p className="text-gray-400 mb-4">
               Leading UK RPA consultancy specializing in UiPath solutions for business transformation.
             </p>
@@ -19,7 +19,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center text-gray-400">
                 <Mail className="w-4 h-4 mr-2" />
-                <span>info@aautomation.co.uk</span>
+                <span>info@deskautomate.co.uk</span>
               </div>
             </div>
           </div>
@@ -30,22 +30,22 @@ export default function Footer() {
             <ul className="space-y-2 text-gray-400">
               <li>
                 <Link href="/services">
-                  <a className="hover:text-white transition-colors">RPA Implementation</a>
+                  <span className="hover:text-white transition-colors cursor-pointer">RPA Implementation</span>
                 </Link>
               </li>
               <li>
                 <Link href="/services">
-                  <a className="hover:text-white transition-colors">Process Assessment</a>
+                  <span className="hover:text-white transition-colors cursor-pointer">Process Assessment</span>
                 </Link>
               </li>
               <li>
                 <Link href="/services">
-                  <a className="hover:text-white transition-colors">UiPath Licensing</a>
+                  <span className="hover:text-white transition-colors cursor-pointer">UiPath Licensing</span>
                 </Link>
               </li>
               <li>
                 <Link href="/services">
-                  <a className="hover:text-white transition-colors">Training & Support</a>
+                  <span className="hover:text-white transition-colors cursor-pointer">Training & Support</span>
                 </Link>
               </li>
             </ul>
@@ -57,22 +57,22 @@ export default function Footer() {
             <ul className="space-y-2 text-gray-400">
               <li>
                 <Link href="/industries">
-                  <a className="hover:text-white transition-colors">Manufacturing</a>
+                  <span className="hover:text-white transition-colors cursor-pointer">Manufacturing</span>
                 </Link>
               </li>
               <li>
                 <Link href="/industries">
-                  <a className="hover:text-white transition-colors">Supply Chain</a>
+                  <span className="hover:text-white transition-colors cursor-pointer">Supply Chain</span>
                 </Link>
               </li>
               <li>
                 <Link href="/industries">
-                  <a className="hover:text-white transition-colors">Financial Services</a>
+                  <span className="hover:text-white transition-colors cursor-pointer">Financial Services</span>
                 </Link>
               </li>
               <li>
                 <Link href="/industries">
-                  <a className="hover:text-white transition-colors">Healthcare</a>
+                  <span className="hover:text-white transition-colors cursor-pointer">Healthcare</span>
                 </Link>
               </li>
             </ul>
@@ -84,22 +84,22 @@ export default function Footer() {
             <ul className="space-y-2 text-gray-400">
               <li>
                 <Link href="/rpa-information">
-                  <a className="hover:text-white transition-colors">RPA Information</a>
+                  <span className="hover:text-white transition-colors cursor-pointer">RPA Information</span>
                 </Link>
               </li>
               <li>
                 <Link href="/about">
-                  <a className="hover:text-white transition-colors">Case Studies</a>
+                  <span className="hover:text-white transition-colors cursor-pointer">Case Studies</span>
                 </Link>
               </li>
               <li>
                 <Link href="/">
-                  <a className="hover:text-white transition-colors">ROI Calculator</a>
+                  <span className="hover:text-white transition-colors cursor-pointer">ROI Calculator</span>
                 </Link>
               </li>
               <li>
                 <Link href="/contact">
-                  <a className="hover:text-white transition-colors">Newsletter</a>
+                  <span className="hover:text-white transition-colors cursor-pointer">Newsletter</span>
                 </Link>
               </li>
             </ul>
@@ -110,18 +110,18 @@ export default function Footer() {
 
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="text-gray-400 text-sm">
-            © 2024 A Automation Company. All rights reserved.
+            © 2024 Desk Automate. All rights reserved.
           </div>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
+            <span className="text-gray-400 hover:text-white transition-colors text-sm cursor-pointer">
               Privacy Policy
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
+            </span>
+            <span className="text-gray-400 hover:text-white transition-colors text-sm cursor-pointer">
               Terms of Service
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
+            </span>
+            <span className="text-gray-400 hover:text-white transition-colors text-sm cursor-pointer">
               Cookie Policy
-            </a>
+            </span>
           </div>
         </div>
       </div>

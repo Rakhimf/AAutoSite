@@ -62,8 +62,8 @@ export default function RPAInfo() {
             
             <div>
               <img
-                src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
-                alt="RPA concept visualization"
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+                alt="UiPath RPA workflow designer"
                 className="rounded-xl shadow-lg w-full"
               />
             </div>

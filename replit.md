@@ -1,6 +1,6 @@
 # Overview
 
-This is a corporate RPA (Robotic Process Automation) website for "A Automation Company", a UK-based consultancy specializing in UiPath solutions. The application serves as a marketing and lead generation platform, featuring service information, industry case studies, ROI calculators, and contact forms. Built as a full-stack web application with React frontend and Express backend, it targets businesses looking to implement automation solutions.
+This is a corporate RPA (Robotic Process Automation) website for "Desk Automate", a UK-based consultancy specializing in UiPath solutions. The application serves as a marketing and lead generation platform, featuring service information, industry case studies, ROI calculators, and contact forms. Built as a full-stack web application with React frontend and Express backend, it targets businesses looking to implement automation solutions.
 
 # User Preferences
 
@@ -43,6 +43,17 @@ Preferred communication style: Simple, everyday language.
 - TypeScript compilation with path mapping for clean imports
 
 The architecture supports easy migration from in-memory storage to PostgreSQL through the storage interface abstraction, making it suitable for both development and production deployment scenarios.
+
+# Recent Changes
+
+## December 2024
+- Updated company name from "A Automation Company" to "Desk Automate" across all pages and components
+- Implemented custom pricing packages:
+  - Bronze: £2,000/month - 1 robot, 24/7 execution, 1 simple automation, full support
+  - Silver: £4,000/month - 2 robots, 24/7 execution, 2 simple automations, full support
+  - Gold: £6,000/month - 3 robots, 24/7 execution, 3 simple automations, full support
+- Updated all imagery to focus on UiPath automation dashboards and RPA workflow visualizations
+- Fixed navigation HTML structure issues by replacing nested anchor tags with span elements
 
 # External Dependencies
 

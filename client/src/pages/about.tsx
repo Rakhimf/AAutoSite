@@ -75,7 +75,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              About A Automation Company
+              About Desk Automate
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Leading UK-based technology consultancy specializing in Robotic Process 
@@ -153,8 +153,8 @@ export default function About() {
 
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
-                alt="Professional team in modern office environment"
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+                alt="UiPath automation development team"
                 className="rounded-xl shadow-lg w-full h-auto"
               />
 
@@ -321,7 +321,7 @@ export default function About() {
                 </div>
 
                 <blockquote className="border-l-4 border-brand-blue pl-4 italic text-gray-600">
-                  "A Automation transformed our production planning. We now have 
+                  "Desk Automate transformed our production planning. We now have 
                   real-time visibility and our team can focus on strategic initiatives."
                 </blockquote>
               </CardContent>

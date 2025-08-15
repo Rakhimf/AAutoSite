@@ -8,8 +8,8 @@ export default function HeroSection() {
       {/* Background Image Overlay */}
       <div className="absolute inset-0 opacity-10">
         <img
-          src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080"
-          alt="Modern office workspace"
+          src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080"
+          alt="UiPath automation dashboard"
           className="w-full h-full object-cover"
         />
       </div>
@@ -49,14 +49,14 @@ export default function HeroSection() {
               <Phone className="w-4 h-4 text-brand-blue mr-2" />
               <span className="mr-6">0845 643 4410</span>
               <Mail className="w-4 h-4 text-brand-blue mr-2" />
-              <span>info@aautomation.co.uk</span>
+              <span>info@deskautomate.co.uk</span>
             </div>
           </div>
 
           <div className="relative">
             <img
-              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
-              alt="Business automation technology dashboard"
+              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+              alt="UiPath RPA automation workflow"
               className="rounded-xl shadow-2xl w-full h-auto"
             />
 

@@ -24,9 +24,9 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <Link href="/">
-              <h1 className="text-2xl font-bold text-brand-blue cursor-pointer">
-                A Automation
-              </h1>
+              <span className="text-2xl font-bold text-brand-blue cursor-pointer">
+                Desk Automate
+              </span>
             </Link>
           </div>
 
@@ -35,15 +35,15 @@ export default function Navigation() {
             <div className="ml-10 flex items-baseline space-x-4">
               {navItems.map((item) => (
                 <Link key={item.href} href={item.href}>
-                  <a
-                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                  <span
+                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors cursor-pointer ${
                       isActive(item.href)
                         ? "text-brand-blue"
                         : "text-gray-700 hover:text-brand-blue"
                     }`}
                   >
                     {item.label}
-                  </a>
+                  </span>
                 </Link>
               ))}
             </div>
@@ -79,8 +79,8 @@ export default function Navigation() {
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
               {navItems.map((item) => (
                 <Link key={item.href} href={item.href}>
-                  <a
-                    className={`block px-3 py-2 rounded-md text-base font-medium ${
+                  <span
+                    className={`block px-3 py-2 rounded-md text-base font-medium cursor-pointer ${
                       isActive(item.href)
                         ? "text-brand-blue bg-blue-50"
                         : "text-gray-700 hover:text-brand-blue hover:bg-gray-50"
@@ -88,7 +88,7 @@ export default function Navigation() {
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {item.label}
-                  </a>
+                  </span>
                 </Link>
               ))}
               <div className="pt-2">

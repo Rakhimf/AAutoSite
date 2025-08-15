@@ -43,56 +43,51 @@ export default function Services() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Discovery Package */}
+            {/* Bronze Package */}
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
-                <div className="w-12 h-12 bg-brand-blue bg-opacity-10 rounded-lg flex items-center justify-center mb-4">
-                  <Search className="text-brand-blue" size={24} />
+                <div className="w-12 h-12 bg-amber-600 bg-opacity-10 rounded-lg flex items-center justify-center mb-4">
+                  <Settings className="text-amber-600" size={24} />
                 </div>
-                <CardTitle className="text-xl">Discovery & Assessment</CardTitle>
+                <CardTitle className="text-xl text-amber-600">Bronze Package</CardTitle>
                 <p className="text-gray-600 mt-2">
-                  Comprehensive process analysis to identify automation opportunities 
-                  and build your business case.
+                  Perfect for small businesses looking to automate their first process.
                 </p>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4 mb-6">
                   <div className="flex items-start">
                     <Check className="w-5 h-5 text-brand-green mr-2 mt-0.5" />
-                    <span className="text-sm">Process mapping and analysis</span>
+                    <span className="text-sm">1x Robot</span>
                   </div>
                   <div className="flex items-start">
                     <Check className="w-5 h-5 text-brand-green mr-2 mt-0.5" />
-                    <span className="text-sm">ROI calculation and business case</span>
+                    <span className="text-sm">24/7 Execution</span>
                   </div>
                   <div className="flex items-start">
                     <Check className="w-5 h-5 text-brand-green mr-2 mt-0.5" />
-                    <span className="text-sm">Feasibility assessment</span>
+                    <span className="text-sm">1x Simple Automation</span>
                   </div>
                   <div className="flex items-start">
                     <Check className="w-5 h-5 text-brand-green mr-2 mt-0.5" />
-                    <span className="text-sm">Technology recommendations</span>
-                  </div>
-                  <div className="flex items-start">
-                    <Check className="w-5 h-5 text-brand-green mr-2 mt-0.5" />
-                    <span className="text-sm">Implementation roadmap</span>
+                    <span className="text-sm">Full Support</span>
                   </div>
                 </div>
                 
                 <div className="text-center mb-4">
-                  <div className="text-2xl font-bold text-gray-900">From £5,000</div>
-                  <div className="text-sm text-gray-600">2-4 week engagement</div>
+                  <div className="text-3xl font-bold text-amber-600">£2,000</div>
+                  <div className="text-sm text-gray-600">per month</div>
                 </div>
                 
                 <Link href="/contact">
-                  <Button variant="outline" className="w-full border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white">
+                  <Button variant="outline" className="w-full border-amber-600 text-amber-600 hover:bg-amber-600 hover:text-white">
                     Get Started
                   </Button>
                 </Link>
               </CardContent>
             </Card>
 
-            {/* Implementation Package - Most Popular */}
+            {/* Silver Package - Most Popular */}
             <Card className="relative hover:shadow-lg transition-shadow border-2 border-brand-green">
               <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                 <Badge className="bg-brand-green text-white">
@@ -102,96 +97,86 @@ export default function Services() {
               </div>
               
               <CardHeader>
-                <div className="w-12 h-12 bg-brand-green bg-opacity-10 rounded-lg flex items-center justify-center mb-4">
-                  <Settings className="text-brand-green" size={24} />
+                <div className="w-12 h-12 bg-gray-400 bg-opacity-10 rounded-lg flex items-center justify-center mb-4">
+                  <Settings className="text-gray-500" size={24} />
                 </div>
-                <CardTitle className="text-xl">Development & Implementation</CardTitle>
+                <CardTitle className="text-xl text-gray-500">Silver Package</CardTitle>
                 <p className="text-gray-600 mt-2">
-                  Full-scale automation development with UiPath technology and 
-                  ongoing support services.
+                  Ideal for growing businesses ready to scale their automation.
                 </p>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4 mb-6">
                   <div className="flex items-start">
                     <Check className="w-5 h-5 text-brand-green mr-2 mt-0.5" />
-                    <span className="text-sm">Robot development and testing</span>
+                    <span className="text-sm">2x Robots</span>
                   </div>
                   <div className="flex items-start">
                     <Check className="w-5 h-5 text-brand-green mr-2 mt-0.5" />
-                    <span className="text-sm">UiPath licensing and setup</span>
+                    <span className="text-sm">24/7 Execution</span>
                   </div>
                   <div className="flex items-start">
                     <Check className="w-5 h-5 text-brand-green mr-2 mt-0.5" />
-                    <span className="text-sm">Training and documentation</span>
+                    <span className="text-sm">2x Simple Automations</span>
                   </div>
                   <div className="flex items-start">
                     <Check className="w-5 h-5 text-brand-green mr-2 mt-0.5" />
-                    <span className="text-sm">24/7 monitoring and support</span>
-                  </div>
-                  <div className="flex items-start">
-                    <Check className="w-5 h-5 text-brand-green mr-2 mt-0.5" />
-                    <span className="text-sm">Performance optimization</span>
+                    <span className="text-sm">Full Support</span>
                   </div>
                 </div>
                 
                 <div className="text-center mb-4">
-                  <div className="text-2xl font-bold text-gray-900">From £10,000</div>
-                  <div className="text-sm text-gray-600">12-month arrangement</div>
+                  <div className="text-3xl font-bold text-gray-500">£4,000</div>
+                  <div className="text-sm text-gray-600">per month</div>
                 </div>
                 
                 <Link href="/contact">
-                  <Button className="w-full bg-brand-green hover:bg-green-700">
+                  <Button className="w-full bg-gray-500 hover:bg-gray-600">
                     Get Started
                   </Button>
                 </Link>
               </CardContent>
             </Card>
 
-            {/* Scaling Package */}
+            {/* Gold Package */}
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
-                <div className="w-12 h-12 bg-brand-orange bg-opacity-10 rounded-lg flex items-center justify-center mb-4">
-                  <TrendingUp className="text-brand-orange" size={24} />
+                <div className="w-12 h-12 bg-yellow-500 bg-opacity-10 rounded-lg flex items-center justify-center mb-4">
+                  <TrendingUp className="text-yellow-500" size={24} />
                 </div>
-                <CardTitle className="text-xl">Scaling & Optimization</CardTitle>
+                <CardTitle className="text-xl text-yellow-500">Gold Package</CardTitle>
                 <p className="text-gray-600 mt-2">
-                  Advanced automation strategies for enterprise-scale operations 
-                  and continuous improvement.
+                  Premium solution for enterprises requiring multiple automations.
                 </p>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4 mb-6">
                   <div className="flex items-start">
                     <Check className="w-5 h-5 text-brand-green mr-2 mt-0.5" />
-                    <span className="text-sm">Orchestration and management</span>
+                    <span className="text-sm">3x Robots</span>
                   </div>
                   <div className="flex items-start">
                     <Check className="w-5 h-5 text-brand-green mr-2 mt-0.5" />
-                    <span className="text-sm">Performance optimization</span>
+                    <span className="text-sm">24/7 Execution</span>
                   </div>
                   <div className="flex items-start">
                     <Check className="w-5 h-5 text-brand-green mr-2 mt-0.5" />
-                    <span className="text-sm">AI and cognitive capabilities</span>
+                    <span className="text-sm">3x Simple Automations</span>
                   </div>
                   <div className="flex items-start">
                     <Check className="w-5 h-5 text-brand-green mr-2 mt-0.5" />
-                    <span className="text-sm">Advanced analytics and reporting</span>
-                  </div>
-                  <div className="flex items-start">
-                    <Check className="w-5 h-5 text-brand-green mr-2 mt-0.5" />
-                    <span className="text-sm">Change management support</span>
+                    <span className="text-sm">Full Support</span>
                   </div>
                 </div>
                 
                 <div className="text-center mb-4">
-                  <div className="text-2xl font-bold text-gray-900">Custom Quote</div>
-                  <div className="text-sm text-gray-600">Enterprise solutions</div>
+                  <div className="text-3xl font-bold text-yellow-500">£6,000</div>
+                  <div className="text-sm text-gray-600">per month</div>
                 </div>
                 
                 <Link href="/contact">
-                  <Button variant="outline" className="w-full border-brand-orange text-brand-orange hover:bg-brand-orange hover:text-white">
-                    Explore Options
+                  <Button variant="outline" className="w-full border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-white">
+                    Get Started
                   </Button>
                 </Link>
               </CardContent>
@@ -238,8 +223,8 @@ export default function Services() {
             
             <div className="text-center">
               <img
-                src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
-                alt="UiPath partnership and certification"
+                src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+                alt="UiPath automation platform interface"
                 className="rounded-xl shadow-lg w-full mb-6"
               />
               <div className="bg-brand-blue text-white p-4 rounded-lg">

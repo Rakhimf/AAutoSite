@@ -30,7 +30,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Why Choose A Automation Company?
+              Why Choose Desk Automate?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We deliver measurable results through intelligent automation solutions
@@ -168,8 +168,8 @@ export default function Home() {
 
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
-                alt="Robotic process automation office environment"
+                src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+                alt="UiPath robotic process automation interface"
                 className="rounded-xl shadow-lg w-full h-auto"
               />
             </div>
